@@ -1,137 +1,128 @@
 ﻿<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BasketTogether — Grocery Savings Circle</title><style>
-:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#172d29;background:#f6f8f5}*{box-sizing:border-box}body{margin:0}main{max-width:560px;margin:auto;padding:18px 16px 60px}header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}h1{font-size:25px;margin:0}h2{font-size:21px;margin:0 0 12px}p{line-height:1.5}.muted{color:#4a615c}.card{background:white;border:1px solid #dce5df;border-radius:18px;padding:18px;margin-bottom:15px;box-shadow:0 2px 7px #102e2410}.hero{background:#dff2e8}.amount{font-size:31px;font-weight:800;margin:4px 0}.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #e8eee9}.row:last-child{border:0}.pill{border-radius:99px;padding:5px 9px;font-size:14px;font-weight:700;background:#e2f4e8;color:#145b3e}.late{background:#fff0d9;color:#815000}.btn,button{font:inherit;font-weight:700;min-height:48px;border:0;border-radius:12px;padding:10px 14px;cursor:pointer}.btn{background:#14694c;color:white;width:100%}.secondary{background:#e7f0eb;color:#174c39}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #b06408;outline-offset:2px}select,input{font:inherit;font-size:17px;padding:12px;width:100%;border:1px solid #9dafaa;border-radius:10px;background:white}label{display:block;font-weight:700;margin:12px 0 6px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{background:#f2f7f3;padding:12px;border-radius:12px}.stat strong{display:block;font-size:23px;margin-top:6px}.note{font-size:14px}.hidden{display:none}.warning{background:#fff3dc;border-radius:12px;padding:12px}small{font-size:14px}.language{width:135px;flex-shrink:0}.language label{margin:0 0 4px;font-size:14px}.language select{padding:9px;font-size:16px}footer{font-size:13px;color:#50635b} @media(max-width:350px){.grid{grid-template-columns:1fr}}
-.prototype-disclosure{background:#f5e6d3;color:#462c37;border:2px solid #967346;border-radius:12px;padding:18px 20px;font-size:16px;line-height:1.6;font-weight:600}.prototype-disclosure p{margin:0;max-width:none}
-.prototype-disclosure{margin-bottom:18px}
+:root{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:17px;color:#172d29;background:#f6f8f5}*{box-sizing:border-box}body{margin:0}main{max-width:580px;margin:auto;padding:18px 16px 60px}header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}h1{font-size:25px;margin:0}h2{font-size:22px;margin:0 0 12px}h3{font-size:18px}p{line-height:1.6}.muted{color:#4a615c}.card{background:white;border:1px solid #dce5df;border-radius:18px;padding:18px;margin-bottom:18px;box-shadow:0 2px 7px #102e2410}.hero{background:#dff2e8}.contribution{border:2px solid #14694c}.amount{font-size:30px;font-weight:800;margin:8px 0}.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #e8eee9}.row:last-child{border:0}.row strong{text-align:right}.pill{border-radius:16px;padding:6px 10px;font-size:16px;font-weight:700;background:#e2f4e8;color:#145b3e}.late{background:#fff0d9;color:#714600}.btn,button{font:inherit;font-weight:700;min-height:48px;border:0;border-radius:12px;padding:12px 14px;cursor:pointer}.btn{background:#14694c;color:white;width:100%;margin-top:12px}.secondary{background:#e7f0eb;color:#174c39}button:disabled{cursor:not-allowed;background:#e1e5e2;color:#4a5850;border:1px solid #a8b3ab}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #95600c;outline-offset:3px}select,input{font:inherit;min-height:48px;padding:12px;width:100%;border:1px solid #9dafaa;border-radius:10px;background:white;color:#172d29}label{display:block;font-weight:700;margin:12px 0 6px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{background:#f2f7f3;padding:12px;border-radius:12px}.stat strong{display:block;font-size:25px;margin-top:6px}.note,small{font-size:16px;line-height:1.6}[hidden]{display:none!important}.warning{background:#fff3dc;border-radius:12px;padding:12px}.language{width:130px;flex-shrink:0}.language label{margin:0 0 4px;font-size:16px}.language select{padding:9px;font-size:16px}.prototype-disclosure{background:#f5e6d3;color:#462c37;border:2px solid #967346;border-radius:12px;padding:16px;margin-bottom:18px;font-size:16px;line-height:1.6}.prototype-disclosure p{margin:0}.prototype-disclosure p+p{margin-top:12px}.message:not(:empty){background:#f0f5ec;border-left:4px solid #526a3d;padding:12px;border-radius:6px}.message.error:not(:empty){background:#fff0dd;border-color:#94631c}.records{padding-left:22px;line-height:1.7}.records li{margin-block:10px}#approvals{display:grid;gap:10px}footer{font-size:16px;color:#4a615c;line-height:1.6}@media(max-width:420px){header{align-items:start;flex-wrap:wrap}.grid{grid-template-columns:1fr}.row{align-items:start;flex-wrap:wrap}.pill{max-width:100%}.card{padding:16px}.amount{font-size:27px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style></head><body><main>
-<header><div><strong>🧺 BasketTogether</strong><div class="muted" data-i18n="tagline">Our simulated grocery savings circle</div></div><div class="language"><label for="languageSelect" data-i18n="language">Language</label><select id="languageSelect" aria-label="Language"><option value="en">English</option><option value="st">Sesotho</option></select></div></header><aside class="prototype-disclosure" aria-label="Prototype disclosure"><p data-i18n="prototypeDisclosure">BasketTogether is a student prototype using fictional members and simulated transactions. No real savings, loans or payments are processed.</p></aside>
-<section class="card hero" aria-labelledby="contrib-title"><h1 id="contrib-title" data-i18n="contributions">This month's simulated contributions</h1><p class="muted" id="monthLabel" data-i18n="month">September · Example data</p><div class="amount" id="collected">€0 of €1,000</div><p id="paidCount"></p><div id="memberList"></div></section>
-<section class="card"><h2 data-i18n="mySavingsPayments">My simulated savings and payments</h2><label for="memberSelect" data-i18n="chooseMember">Choose a member</label><select id="memberSelect"></select><div id="memberSummary" aria-live="polite"></div></section>
-<section class="card"><h2 data-i18n="tryRepayment">Try a repayment</h2><p class="muted" data-i18n="repayHelp">See how paying part of a loan changes next month's interest. This is only a demonstration.</p><label for="principalInput" data-i18n="principalLabel">Loan amount to repay (€)</label><input id="principalInput" type="number" min="0" step="1" value="50"><button class="btn" id="repayButton" data-i18n="calculate">Calculate next payment</button><p id="repayResult" aria-live="polite"></p></section>
-<section class="card"><h2 data-i18n="askBorrow">Ask to borrow</h2><p class="muted" data-i18n="borrowHelp">Borrowing is optional. You can have more than one loan, but your total unpaid loan cannot exceed your savings or €300, whichever is lower.</p><p id="borrowLimit"></p><label for="borrowAmount" data-i18n="amountRequest">Amount to request (€)</label><input id="borrowAmount" type="number" min="1" step="1" value="50"><button class="btn secondary" id="requestButton" data-i18n="sendRequest">Send demo request</button><p id="requestResult" aria-live="polite"></p><div id="approvalPanel" class="hidden"><h3 data-i18n="threeApprovals">Three approvals needed</h3><p class="note" data-i18n="reviewerHelp">For this demonstration, use the three buttons to act as the three appointed reviewers. In a real app, each reviewer would need separate verified access.</p><div id="approvals"></div><p id="approvalStatus" aria-live="polite"></p></div></section>
-<section class="card"><h2 data-i18n="groceryGoal">December grocery goal</h2><div class="grid"><div class="stat"><span data-i18n="annualSavings">Illustrative member contributions</span><strong>€1,100</strong></div><div class="stat"><span data-i18n="groupContributions">Illustrative total contributions</span><strong>€11,000</strong><span data-i18n="totalAssumptions">10 members × €100 × 11 months, before costs and other adjustments.</span></div></div><p class="muted" data-i18n="groceryHelp">Illustrative total only: 10 members × €100 × 11 months = €11,000, before costs, loans and other adjustments. The €1,100 per member is illustrative too. Neither amount is a real savings balance or a guaranteed grocery budget.</p><p data-i18n="groceryPlan">🛒 In December, members agree on a shopping list and buy household essentials in bulk.</p></section>
-<footer data-i18n="footer">Student alpha prototype. Fictional members and simulated amounts. No login, bank connection, real loans or payments. No claim of regulatory authorisation or existing customers. Monthly loan interest is modelled at 15% of the outstanding principal; all loans must be repaid by 31 October.</footer>
+<header><div><strong>BasketTogether</strong><div class="muted" data-i18n="tagline">Our simulated grocery savings circle</div></div><div class="language"><label for="languageSelect" data-i18n="language">Language</label><select id="languageSelect"><option value="en">English</option><option value="st">Sesotho</option></select></div></header>
+<aside class="prototype-disclosure"><p data-i18n="shortDisclosure">Student prototype. All members, payments and loan transactions are simulated.</p><p data-i18n="prototypeDisclosure">BasketTogether is a student prototype using fictional members and simulated transactions. No real savings, loans or payments are processed.</p><p data-i18n="sessionNote">Fixed example month: September. Demo changes last only until this page is refreshed. No banking details are collected.</p></aside>
+<section class="card hero" aria-labelledby="contrib-title"><h1 id="contrib-title" data-i18n="contributions">This month's simulated contributions</h1><p class="muted" data-i18n="month">September · Fixed example month</p><div class="amount" id="collected"></div><p id="paidCount"></p><p class="note" data-i18n="dashboardNote">Savings contributions only. Loan repayments and interest are excluded.</p><div id="memberList"></div><div class="row"><span data-i18n="groupSaved">Group's accumulated simulated savings</span><strong id="groupSaved"></strong></div></section>
+<section class="card" aria-labelledby="member-title"><h2 id="member-title" data-i18n="chooseMember">Choose a member</h2><label for="memberSelect" data-i18n="memberLabel">Demo member</label><select id="memberSelect"></select><div class="row"><span data-i18n="savings">My accumulated simulated savings</span><strong id="memberSavings"></strong></div><p id="lateWarning" class="warning" hidden data-i18n="lateWarning">This member's contribution was late last month. This is fictional history.</p></section>
+<section class="card contribution" aria-labelledby="monthly-title"><h2 id="monthly-title" data-i18n="monthlyTitle">My Monthly Contribution</h2><p data-i18n="contributionHelp">Record a simulated €100 savings contribution for the selected member. This does not repay a loan.</p><div class="row"><span data-i18n="contributionMonth">Contribution month</span><strong data-i18n="monthName">September</strong></div><div class="row"><span data-i18n="required">Required monthly contribution</span><strong>€100.00</strong></div><div class="row"><span data-i18n="paymentStatus">Simulated contribution status</span><strong id="contributionStatus"></strong></div><button class="btn" id="contributionButton" type="button" data-i18n="recordContribution" aria-describedby="contributionOnce contributionResult">Record My Contribution</button><p id="contributionOnce" class="note" data-i18n="contributionOnce">Only one contribution can be recorded per member for this example month.</p><p class="message" id="contributionResult" role="status" aria-live="polite" aria-atomic="true"></p></section>
+<section class="card" aria-labelledby="loan-title"><h2 id="loan-title" data-i18n="loanTitle">Loan Repayment</h2><p data-i18n="repayHelp">Record a partial or full simulated principal repayment. It reduces the loan principal, never your savings.</p><p id="noLoan" class="warning" hidden data-i18n="noLoan">No outstanding loan</p><div class="row"><span data-i18n="principal">Outstanding simulated loan principal</span><strong id="loanPrincipal"></strong></div><div class="row"><span data-i18n="interestDue">September interest obligation (15% at month start)</span><strong id="interestDue"></strong></div><div class="row"><span data-i18n="futureInterest">Future monthly interest (15% of remaining principal)</span><strong id="futureInterest"></strong></div><div class="row"><span data-i18n="deadline">Loan repayment deadline</span><strong data-i18n="deadlineDate">31 October</strong></div><p class="note" id="interestNote" data-i18n="interestNote">Principal repayments do not pay off interest already owed. September interest remains separate and unpaid in this demo, even after the principal is fully repaid. No interest payment is recorded here.</p><label for="principalInput" data-i18n="principalLabel">Principal amount to repay (€)</label><input id="principalInput" type="number" min="0.01" step="0.01" inputmode="decimal" value="50" aria-describedby="interestNote repayResult"><button class="btn" id="repayButton" type="button" data-i18n="recordRepayment">Record Loan Repayment</button><p class="message" id="repayResult" role="status" aria-live="polite" aria-atomic="true"></p><h3 data-i18n="repaymentHistory">Simulated principal repayment records</h3><ul class="records" id="repaymentHistory"></ul></section>
+<section class="card" aria-labelledby="borrow-title"><h2 id="borrow-title" data-i18n="askBorrow">Ask to borrow</h2><p class="muted" data-i18n="borrowHelp">Optional demo requests are limited to the lower of your simulated savings or €300, minus outstanding principal. Every request needs approval from three appointed administrators.</p><p id="borrowLimit"></p><label for="borrowAmount" data-i18n="amountRequest">Amount to request (€)</label><input id="borrowAmount" type="number" min="0.01" step="0.01" inputmode="decimal" value="50" aria-describedby="requestResult"><button class="btn secondary" id="requestButton" type="button" data-i18n="sendRequest">Send demo request</button><p class="message" id="requestResult" role="status" aria-live="polite" aria-atomic="true"></p><div id="approvalPanel" hidden><h3 data-i18n="threeApprovals">Three administrator approvals needed</h3><p class="note" data-i18n="reviewerHelp">These buttons simulate three appointed administrators. Approval only changes a demo request's status. It does not disburse money or increase the loan balance.</p><div id="approvals"></div><p id="approvalStatus" role="status" aria-live="polite" aria-atomic="true"></p></div></section>
+<section class="card" aria-labelledby="goal-title"><h2 id="goal-title" data-i18n="groceryGoal">December grocery goal</h2><div class="grid"><div class="stat"><span data-i18n="annualSavings">Illustrative member contributions</span><strong>€1,100</strong></div><div class="stat"><span data-i18n="groupContributions">Illustrative total contributions</span><strong>€11,000</strong></div></div><p class="muted" data-i18n="groceryHelp">Illustrative total only: 10 members × €100 × 11 months = €11,000, before costs, loans and other adjustments. This is not a real savings balance or a guaranteed grocery budget.</p><p data-i18n="groceryPlan">In December, members agree on a shopping list and share bulk groceries under their group's agreed rules.</p></section>
+<footer data-i18n="footer">Student alpha prototype. Fictional members and simulated transactions. No real payments or loans are processed. No claim of regulatory authorisation. Monthly interest is modelled at 15%; the example loan repayment deadline is 31 October.</footer>
 </main><script>
-// All data are invented for this classroom demonstration.
-const members=[
-{name:'Amara',saved:900,paid:true,loan:100,lateLastMonth:false},
-{name:'Busi',saved:800,paid:true,loan:200,lateLastMonth:false},
+'use strict';
+// Fictional September scenario. All amounts are integer cents; no data leave this page.
+const DEMO_MONTH='demo-september',CONTRIBUTION_CENTS=10000,RATE=0.15;
+const seedMembers=[
+{name:'Amara',saved:900,paid:true,loan:100},
+{name:'Busi',saved:800,paid:true,loan:200},
 {name:'Chipo',saved:700,paid:false,loan:100,lateLastMonth:true},
-{name:'Dina',saved:900,paid:true,loan:0,lateLastMonth:false},
-{name:'Esme',saved:800,paid:true,loan:50,lateLastMonth:false},
-{name:'Fatima',saved:700,paid:false,loan:0,lateLastMonth:false},
-{name:'Grace',saved:900,paid:true,loan:300,lateLastMonth:false},
-{name:'Hana',saved:900,paid:true,loan:0,lateLastMonth:false},
-{name:'Ivy',saved:800,paid:true,loan:150,lateLastMonth:false},
-{name:'Jade',saved:900,paid:true,loan:0,lateLastMonth:false}
+{name:'Dina',saved:900,paid:true,loan:0},
+{name:'Esme',saved:800,paid:true,loan:50},
+{name:'Fatima',saved:700,paid:false,loan:0},
+{name:'Grace',saved:900,paid:true,loan:300},
+{name:'Hana',saved:900,paid:true,loan:0},
+{name:'Ivy',saved:800,paid:true,loan:150},
+{name:'Jade',saved:900,paid:true,loan:0}
 ];
-
+const members=seedMembers.map((m,id)=>({id,name:m.name,openingSavingsCents:m.saved*100-(m.paid?CONTRIBUTION_CENTS:0),loanPrincipalCents:m.loan*100,lateLastMonth:!!m.lateLastMonth}));
+// Opening savings are fictional prior-month history. September savings are recorded separately.
+const contributionRecords=seedMembers.flatMap((m,memberId)=>m.paid?[{memberId,month:DEMO_MONTH,amountCents:CONTRIBUTION_CENTS,simulated:true}]:[]);
+const interestObligations=members.map(m=>({memberId:m.id,month:DEMO_MONTH,amountCents:Math.round(m.loanPrincipalCents*RATE),paidCents:0}));
+const loanRepayments=[],loanRequests=[];
+const contributionMessages=new Map(),repaymentMessages=new Map(),requestMessages=new Map();
+let selected=2,language='en';
 const translations={
- en:{
-  totalAssumptions:"10 members × €100 × 11 months, before costs and other adjustments.",
-  prototypeDisclosure:"BasketTogether is a student prototype using fictional members and simulated transactions. No real savings, loans or payments are processed.",
-  tagline:"Our simulated grocery savings circle",language:"Language",contributions:"This month's simulated contributions",month:"September · Example data",
-  mySavingsPayments:"My simulated savings and payments",chooseMember:"Choose a member",tryRepayment:"Try a repayment",
-  repayHelp:"See how paying part of a loan changes next month's interest. This is only a demonstration.",
-  principalLabel:"Loan amount to repay (€)",calculate:"Calculate next payment",askBorrow:"Ask to borrow",
-  borrowHelp:"Borrowing is optional. You can have more than one loan, but your total unpaid loan cannot exceed your savings or €300, whichever is lower.",
-  amountRequest:"Amount to request (€)",sendRequest:"Send demo request",threeApprovals:"Three approvals needed",
-  reviewerHelp:"For this demonstration, use the three buttons to act as the three appointed reviewers. In a real app, each reviewer would need separate verified access.",
-  groceryGoal:"December grocery goal",annualSavings:"Illustrative member contributions",groupContributions:"Illustrative total contributions",
-  groceryHelp:"Illustrative total only: 10 members × €100 × 11 months = €11,000, before costs, loans and other adjustments. The €1,100 per member is illustrative too. Neither amount is a real savings balance or a guaranteed grocery budget.",
-  groceryPlan:"🛒 In December, members agree on a shopping list and buy household essentials in bulk.",
-  footer:"Student alpha prototype. Fictional members and simulated amounts. No login, bank connection, real loans or payments. No claim of regulatory authorisation or existing customers. Monthly loan interest is modelled at 15% of the outstanding principal; all loans must be repaid by 31 October.",
-  paid:"Paid",notPaid:"Not paid",paidCount:n=>`${n} of 10 members have paid`,lateWarning:"Your contribution was late last month. Check your current payment below.",
-  savings:"My simulated savings",loanStill:"Simulated loan outstanding",thisMonth:"This month's savings",due:"€100 due",interest:"Monthly loan interest",
-  nextAmount:"Next month's scheduled amount*",nextNote:"*Assumes no further loans or principal repayments. Includes €100 savings and interest, but not principal. Any unpaid current charges must also be settled.",
-  canBorrow:n=>`You can request up to ${n}.`,repayInvalid:n=>`Enter an amount from €0 to ${n}.`,
-  repayResult:(a,r,i,total)=>`If you repay ${a} of the loan principal, ${r} remains. Next month's interest will be ${i}. Your next scheduled savings plus interest will be ${total}. This calculation does not record a real payment.`,
-  requestInvalid:n=>`Please enter more than €0 and no more than ${n}.`,
-  requestSent:n=>`Demo request for ${n} sent for review. No money has moved.`,
-  reviewer:"Reviewer",approved:"Approved",approve:"Approve",
-  approvalStatus:(n,done)=>`${n} of 3 approvals recorded. ${done?"Demo request approved; no funds transferred.":"Waiting for all three reviewers."}`
- },
- st:{
-  totalAssumptions:"Litho tse 10 × €100 × likhoeli tse 11, pele ho litšenyehelo le liphetoho tse ling.",
-  prototypeDisclosure:"BasketTogether ke mohlala oa moithuti o sebelisang litho tsa boiqapelo le litšebelisano tse etsisitsoeng. Ha ho poloko ea chelete, likalimo kapa litefo tsa sebele tse sebetsoang.",
-  tagline:"Sehlopha sa mohlala sa ho bolokela korosari",language:"Puo",contributions:"Menehelo e etsisitsoeng ea khoeli ena",month:"Loetse · Lintlha tsa mohlala",
-  mySavingsPayments:"Poloko ea ka le litefo tse etsisitsoeng",chooseMember:"Khetha setho",tryRepayment:"Leka ho lefa mokoloto",
-  repayHelp:"Bona hore ho lefa karolo ea mokoloto ho fetola tsoala ea khoeli e tlang joang. Ena ke teko feela.",
-  principalLabel:"Chelete ea mokoloto eo u batlang ho e lefa (€)",calculate:"Bala tefo e latelang",askBorrow:"Kopa mokoloto",
-  borrowHelp:"Ho alima ke boikhethelo. U ka alima makhetlo a mangata, empa mokoloto o setseng o ke ke oa feta chelete eo u e bolokileng kapa €300, ho khethoa e nyenyane.",
-  amountRequest:"Chelete eo u e kopang (€)",sendRequest:"Romela kopo ea teko",threeApprovals:"Ho hlokahala tumello tse tharo",
-  reviewerHelp:"Tekong ena, sebelisa likonopo tse tharo ho emela baahloli ba khethiloeng. Ts'ebetsong ea sebele, e mong le e mong o tla hloka mokhoa oa hae o netefalitsoeng oa ho kena.",
-  groceryGoal:"Sepheo sa korosari ea Tšitoe",annualSavings:"Menehelo ea setho ea mohlala",groupContributions:"Kakaretso ea menehelo ea mohlala",
-  groceryHelp:"Kakaretso ea mohlala feela: litho tse 10 × €100 × likhoeli tse 11 = €11,000, pele ho litšenyehelo, likalimo le liphetoho tse ling. €1,100 ea setho ka seng le eona ke mohlala. Chelete ena ha se poloko ea sebele kapa tekanyetso ea korosari e tiisitsoeng.",
-  groceryPlan:"🛒 Ka Tšitoe, litho li lumellana ka lethathamo la korosari ebe li reka lintho tsa bohlokoa tsa malapa ka bongata.",
-  footer:"Mohlala oa app ea moithuti. Litho le chelete ke tsa boiqapelo. Ha ho ho kena ka ak'haonte, khokahanyo ea banka, likalimo kapa litefo tsa sebele. Ha ho boleloe hore app e laoloa ke molaoli oa lichelete kapa e na le bareki. Tsoala ea khoeli ke 15% ea mokoloto o setseng; likalimo tsohle li tlameha ho lefshoa ka la 31 Mphalane.",
-  paid:"O lefile",notPaid:"Ha a so lefe",paidCount:n=>`Litho tse ${n} ho tse 10 li lefile`,lateWarning:"U ile ua lefa morao khoeling e fetileng. Sheba tefo ea khoeli ena ka tlase.",
-  savings:"Poloko ea ka e etsisitsoeng",loanStill:"Mokoloto o etsisitsoeng o setseng",thisMonth:"Monehelo oa khoeli ena",due:"€100 e lokelang ho lefshoa",interest:"Tsoala ea mokoloto ea khoeli",
-  nextAmount:"Tefo e reriloeng ea khoeli e tlang*",nextNote:"*Ho nahanoa hore ha ho mokoloto o mocha kapa tefo e 'ngoe ea mokoloto. E kenyelletsa €100 ea poloko le tsoala, eseng tefo ea mokoloto oa mantlha. Litefo tse saletseng morao le tsona li tlameha ho lefshoa.",
-  canBorrow:n=>`U ka kopa ho fihla ho ${n}.`,repayInvalid:n=>`Kenya chelete ho tloha ho €0 ho isa ho ${n}.`,
-  repayResult:(a,r,i,total)=>`Ha u lefa ${a} ea mokoloto oa mantlha, ho sala ${r}. Tsoala ea khoeli e tlang e tla ba ${i}. Poloko le tsoala ea khoeli e tlang li tla ba ${total}. Palo ena ha e tlalehe tefo ea sebele.`,
-  requestInvalid:n=>`Kenya chelete e fetang €0 empa e sa fete ${n}.`,
-  requestSent:n=>`Kopo ea teko ea ${n} e rometsoe hore e hlahlojoe. Ha ho chelete e fetisitsoeng.`,
-  reviewer:"Mohlahlobi",approved:"E amohetsoe",approve:"Amohela",
-  approvalStatus:(n,done)=>`Litumello tse ${n} ho tse 3 li tlalehiloe. ${done?"Kopo ea teko e amohetsoe; ha ho chelete e fetisitsoeng.":"Ho emetsoe bahlahlobi bohle ba bararo."}`
- }
+en:{
+tagline:'Our simulated grocery savings circle',language:'Language',shortDisclosure:'Student prototype. All members, payments and loan transactions are simulated.',
+prototypeDisclosure:'BasketTogether is a student prototype using fictional members and simulated transactions. No real savings, loans or payments are processed.',
+sessionNote:'Fixed example month: September. Demo changes last only until this page is refreshed. No banking details are collected.',
+contributions:"This month's simulated contributions",month:'September · Fixed example month',monthName:'September',dashboardNote:'Savings contributions only. Loan repayments and interest are excluded.',groupSaved:"Group's accumulated simulated savings",
+chooseMember:'Choose a member',memberLabel:'Demo member',savings:'My accumulated simulated savings',lateWarning:"This member's contribution was late last month. This is fictional history.",
+monthlyTitle:'My Monthly Contribution',contributionHelp:'Record a simulated €100 savings contribution for the selected member. This does not repay a loan.',contributionMonth:'Contribution month',required:'Required monthly contribution',paymentStatus:'Simulated contribution status',recordContribution:'Record My Contribution',contributionOnce:'Only one contribution can be recorded per member for this example month.',paid:'Recorded (simulated)',notPaid:'Not yet recorded',
+paidCount:n=>`${n} of 10 members have a simulated contribution recorded.`,
+contributionSuccess:'Simulated €100 contribution recorded for September. Your savings and the group contribution totals have been updated. No real money was received.',contributionDuplicate:'A simulated contribution is already recorded for this member for September. No second contribution was added.',
+loanTitle:'Loan Repayment',repayHelp:'Record a partial or full simulated principal repayment. It reduces the loan principal, never your savings.',noLoan:'No outstanding loan',principal:'Outstanding simulated loan principal',interestDue:'September interest obligation (15% at month start)',futureInterest:'Future monthly interest (15% of remaining principal)',deadline:'Loan repayment deadline',deadlineDate:'31 October',
+interestNote:'Principal repayments do not pay off interest already owed. September interest remains separate and unpaid in this demo, even after the principal is fully repaid. No interest payment is recorded here.',principalLabel:'Principal amount to repay (€)',recordRepayment:'Record Loan Repayment',repaymentHistory:'Simulated principal repayment records',noRepayments:'No simulated principal repayments recorded in this session.',
+repayInvalid:max=>`Enter an amount greater than €0 and no more than ${max}, using at most two decimal places. No repayment was recorded.`,
+repaymentSuccess:(amount,remaining,interest)=>`Simulated principal repayment of ${amount} recorded. Remaining principal: ${remaining}. Future monthly interest at 15%: ${interest}. Savings and existing interest obligations are unchanged. No real money was transferred.`,
+repaymentRow:(amount,remaining)=>`September: ${amount} simulated principal repayment. Principal remaining after this record: ${remaining}.`,
+askBorrow:'Ask to borrow',borrowHelp:'Optional demo requests are limited to the lower of your simulated savings or €300, minus outstanding principal. Every request needs approval from three appointed administrators.',amountRequest:'Amount to request (€)',sendRequest:'Send demo request',threeApprovals:'Three administrator approvals needed',reviewerHelp:"These buttons simulate three appointed administrators. Approval only changes a demo request's status. It does not disburse money or increase the loan balance.",
+canBorrow:max=>`You can request up to ${max} in this simulation.`,requestInvalid:max=>`Enter an amount greater than €0 and no more than ${max}, using at most two decimal places.`,requestSent:amount=>`Demo request for ${amount} recorded for review. No funds have been disbursed.`,requestPending:'This member already has a demo request awaiting three administrator approvals. No second pending request was added.',reviewer:'Administrator',approved:'Approved',approve:'Approve',
+approvalStatus:(n,done)=>`${n} of 3 approvals recorded. ${done?'Demo request approved; no funds disbursed and no loan balance changed.':'Waiting for all three administrators.'}`,
+groceryGoal:'December grocery goal',annualSavings:'Illustrative member contributions',groupContributions:'Illustrative total contributions',groceryHelp:'Illustrative total only: 10 members × €100 × 11 months = €11,000, before costs, loans and other adjustments. This is not a real savings balance or a guaranteed grocery budget.',groceryPlan:"In December, members agree on a shopping list and share bulk groceries under their group's agreed rules.",footer:'Student alpha prototype. Fictional members and simulated transactions. No real payments or loans are processed. No claim of regulatory authorisation. Monthly interest is modelled at 15%; the example loan repayment deadline is 31 October.'
+},
+st:{
+tagline:'Sehlopha sa mohlala sa ho bolokela korosari',language:'Puo',shortDisclosure:'Mohlala oa moithuti. Litho tsohle, litefo le litšebelisano tsa likalimo li etsisitsoe.',prototypeDisclosure:'BasketTogether ke mohlala oa moithuti o sebelisang litho tsa boiqapelo le litšebelisano tse etsisitsoeng. Ha ho poloko ea chelete, likalimo kapa litefo tsa sebele tse sebetsoang.',sessionNote:'Khoeli ea mohlala e sa fetoheng: Loetse. Liphetoho tsa teko li fela ha leqephe le nchafatsoa. Ha ho lintlha tsa banka tse bokelloang.',
+contributions:'Menehelo e etsisitsoeng ea khoeli ena',month:'Loetse · Khoeli ea mohlala e sa fetoheng',monthName:'Loetse',dashboardNote:'Ke menehelo ea poloko feela. Litefo tsa mokoloto le tsoala ha li baloe mona.',groupSaved:'Kakaretso ea poloko e etsisitsoeng ea sehlopha',chooseMember:'Khetha setho',memberLabel:'Setho sa mohlala',savings:'Kakaretso ea poloko ea ka e etsisitsoeng',lateWarning:'Monehelo oa setho sena o ile oa fihla morao khoeling e fetileng. Ena ke nalane ea boiqapelo.',
+monthlyTitle:'Monehelo oa Ka oa Khoeli',contributionHelp:'Tlaleha monehelo oa poloko o etsisitsoeng oa €100 bakeng sa setho se khethiloeng. Sena ha se lefe mokoloto.',contributionMonth:'Khoeli ea monehelo',required:'Monehelo o hlokahalang ka khoeli',paymentStatus:'Boemo ba monehelo o etsisitsoeng',recordContribution:'Tlaleha Monehelo oa Ka',contributionOnce:'Ho ka tlalehoa monehelo o le mong feela bakeng sa setho ka seng khoeling ena ea mohlala.',paid:'O tlalehiloe (teko)',notPaid:'Ha o so tlalehoe',
+paidCount:n=>`Litho tse ${n} ho tse 10 li na le monehelo o etsisitsoeng o tlalehiloeng.`,contributionSuccess:'Monehelo o etsisitsoeng oa €100 oa Loetse o tlalehiloe. Poloko ea hao le kakaretso ea menehelo ea sehlopha li ntlafalitsoe. Ha ho chelete ea sebele e amohetsoeng.',contributionDuplicate:'Monehelo o etsisitsoeng oa Loetse o se o tlalehiloe bakeng sa setho sena. Ha ho monehelo oa bobeli o kentsoeng.',
+loanTitle:'Tefo ea Mokoloto',repayHelp:'Tlaleha tefo e etsisitsoeng ea karolo kapa mokoloto oohle oa mantlha. E fokotsa mokoloto oa mantlha, eseng poloko ea hao.',noLoan:'Ha ho mokoloto oa mantlha o setseng',principal:'Mokoloto oa mantlha o etsisitsoeng o setseng',interestDue:'Tsoala e kolotoang ea Loetse (15% qalong ea khoeli)',futureInterest:'Tsoala ea khoeli e tlang (15% ea mokoloto o setseng)',deadline:'Letsatsi la ho qetela la ho lefa mokoloto',deadlineDate:'31 Mphalane',interestNote:'Ho lefa mokoloto oa mantlha ha ho lefe tsoala e seng e kolotoa. Tsoala ea Loetse e sala e arohane ebile e sa lefshoa tekong ena, leha mokoloto oa mantlha o lefshoa kaofela. Ha ho tefo ea tsoala e tlalehoang mona.',principalLabel:'Chelete ea mokoloto oa mantlha eo u e lefang (€)',recordRepayment:'Tlaleha Tefo ea Mokoloto',repaymentHistory:'Litlaleho tsa litefo tse etsisitsoeng tsa mokoloto oa mantlha',noRepayments:'Ha ho litefo tse etsisitsoeng tsa mokoloto oa mantlha tse tlalehiloeng tekong ena.',
+repayInvalid:max=>`Kenya chelete e fetang €0 empa e sa fete ${max}, ka linomoro tse sa feteng tse peli ka mor’a letheba. Ha ho tefo e tlalehiloeng.`,repaymentSuccess:(amount,remaining,interest)=>`Tefo e etsisitsoeng ea mokoloto oa mantlha ea ${amount} e tlalehiloe. Ho setse ${remaining}. Tsoala ea khoeli e tlang ea 15% ke ${interest}. Poloko le tsoala e seng e kolotoa ha lia fetoha. Ha ho chelete ea sebele e fetisitsoeng.`,repaymentRow:(amount,remaining)=>`Loetse: tefo e etsisitsoeng ea mokoloto oa mantlha ea ${amount}. Ka mor’a tlaleho ena ho setse ${remaining}.`,
+askBorrow:'Kopa mokoloto',borrowHelp:'Likopo tsa teko ke tsa boikhethelo. Moeli ke poloko e etsisitsoeng kapa €300, ho khethoa e nyenyane, ho tlosoe mokoloto oa mantlha o setseng. Kopo ka ’ngoe e hloka tumello ea batsamaisi ba bararo ba khethiloeng.',amountRequest:'Chelete eo u e kopang (€)',sendRequest:'Romela kopo ea teko',threeApprovals:'Ho hlokahala litumello tsa batsamaisi ba bararo',reviewerHelp:'Likonopo tsena li etsisa batsamaisi ba bararo ba khethiloeng. Tumello e fetola boemo ba kopo ea teko feela. Ha e fane ka chelete kapa ho eketsa mokoloto.',canBorrow:max=>`U ka kopa ho fihla ho ${max} tekong ena.`,requestInvalid:max=>`Kenya chelete e fetang €0 empa e sa fete ${max}, ka linomoro tse sa feteng tse peli ka mor’a letheba.`,requestSent:amount=>`Kopo ea teko ea ${amount} e tlalehiloe hore e hlahlojoe. Ha ho chelete e fanoeng.`,requestPending:'Setho sena se se se na le kopo ea teko e emetseng litumello tsa batsamaisi ba bararo. Ha ho kopo ea bobeli e kentsoeng.',reviewer:'Motsamaisi',approved:'E amohetsoe',approve:'Amohela',approvalStatus:(n,done)=>`Litumello tse ${n} ho tse 3 li tlalehiloe. ${done?'Kopo ea teko e amohetsoe; ha ho chelete e fanoeng ebile mokoloto ha oa fetoha.':'Ho emetsoe batsamaisi bohle ba bararo.'}`,
+groceryGoal:'Sepheo sa korosari ea Tšitoe',annualSavings:'Menehelo ea setho ea mohlala',groupContributions:'Kakaretso ea menehelo ea mohlala',groceryHelp:'Kakaretso ea mohlala feela: litho tse 10 × €100 × likhoeli tse 11 = €11,000, pele ho litšenyehelo, likalimo le liphetoho tse ling. Ena ha se poloko ea sebele kapa tekanyetso ea korosari e tiisitsoeng.',groceryPlan:'Ka Tšitoe, litho li lumellana ka lethathamo la korosari ebe li arolelana korosari e rekoang ka bongata ho latela melao ea sehlopha.',footer:'Mohlala oa pele oa moithuti. Litho tsa boiqapelo le litšebelisano tse etsisitsoeng. Ha ho litefo kapa likalimo tsa sebele tse sebetsoang. Ha ho boleloe tumello ea molaoli oa lichelete. Tsoala ea khoeli ea mohlala ke 15%; letsatsi la ho qetela la mohlala la ho lefa mokoloto ke 31 Mphalane.'
+}
 };
-const euro=n=>'€'+Number(n).toFixed(2);
-const el=id=>document.getElementById(id);
-let selected=2,request=null,language='en',repayMessage=null,requestMessage=null;
-const t=()=>translations[language];
-function setLanguage(value){
- language=value;document.documentElement.lang=value;
- document.querySelectorAll('[data-i18n]').forEach(node=>node.textContent=t()[node.dataset.i18n]);
- render();
-}
-function limit(m){return Math.max(0,Math.min(m.saved,300)-m.loan)}
-function render(){
- let paid=members.filter(m=>m.paid).length;
- el('collected').textContent=`€${paid*100} / €1,000`;
- el('paidCount').textContent=t().paidCount(paid);
- el('memberList').innerHTML=members.map(m=>`<div class="row"><strong>${m.name}</strong><span class="pill ${m.paid?'':'late'}">${m.paid?t().paid+' €100':t().notPaid}</span></div>`).join('');
- el('memberSelect').innerHTML=members.map((m,i)=>`<option value="${i}">${m.name}</option>`).join('');
- el('memberSelect').value=selected;renderMember(false);
-}
-function renderMember(reset=true){
- let m=members[selected],interest=m.loan*.15;
- el('memberSummary').innerHTML=`${m.lateLastMonth?'<p class="warning">'+t().lateWarning+'</p>':''}<div class="grid"><div class="stat">${t().savings}<strong>${euro(m.saved)}</strong></div><div class="stat">${t().loanStill}<strong>${euro(m.loan)}</strong></div></div><div class="row"><span>${t().thisMonth}</span><strong>${m.paid?t().paid:t().due}</strong></div><div class="row"><span>${t().interest}</span><strong>${euro(interest)}</strong></div><div class="row"><span>${t().nextAmount}</span><strong>${euro(100+interest)}</strong></div><small class="muted">${t().nextNote}</small>`;
- el('borrowLimit').textContent=t().canBorrow(euro(limit(m)));
- if(reset){repayMessage=null;requestMessage=null;request=null;el('approvalPanel').classList.add('hidden')}
- renderMessages();
-}
+const el=id=>document.getElementById(id),t=()=>translations[language],euro=cents=>'€'+(cents/100).toFixed(2),member=()=>members[selected];
+const contributionFor=m=>contributionRecords.find(r=>r.memberId===m.id&&r.month===DEMO_MONTH);
+const savingsFor=m=>m.openingSavingsCents+contributionRecords.filter(r=>r.memberId===m.id).reduce((sum,r)=>sum+r.amountCents,0);
+const monthlyTotal=()=>contributionRecords.filter(r=>r.month===DEMO_MONTH).reduce((sum,r)=>sum+r.amountCents,0);
+const futureInterestFor=m=>Math.round(m.loanPrincipalCents*RATE);
+const interestFor=m=>interestObligations.find(r=>r.memberId===m.id&&r.month===DEMO_MONTH);
+const limit=m=>Math.max(0,Math.min(savingsFor(m),30000)-m.loanPrincipalCents);
+const requestFor=m=>loanRequests.filter(r=>r.memberId===m.id).slice(-1)[0];
+function parseCents(value){const text=String(value).trim();if(!/^(?:\d+|\d*\.\d{1,2})$/.test(text))return null;const cents=Math.round(Number(text)*100);return Number.isSafeInteger(cents)&&cents>0?cents:null;}
+function showMessage(id,text,error=false){el(id).textContent=text;el(id).classList.toggle('error',error);}
 function renderMessages(){
- if(repayMessage){const [a,r,i,total]=repayMessage;el('repayResult').textContent=t().repayResult(euro(a),euro(r),euro(i),euro(total))}
- else el('repayResult').textContent='';
- if(requestMessage){el('requestResult').textContent=requestMessage.type==='invalid'?t().requestInvalid(euro(requestMessage.amount)):t().requestSent(euro(requestMessage.amount))}
- else el('requestResult').textContent='';
- if(request)renderApprovals();
+const cm=contributionMessages.get(selected);showMessage('contributionResult',cm?t()[cm]:'',cm==='contributionDuplicate');
+const rm=repaymentMessages.get(selected);showMessage('repayResult',!rm?'':rm.type==='success'?t().repaymentSuccess(euro(rm.amount),euro(rm.remaining),euro(rm.interest)):rm.type==='noLoan'?t().noLoan:t().repayInvalid(euro(rm.max)),!!rm&&rm.type==='invalid');
+const qm=requestMessages.get(selected);showMessage('requestResult',!qm?'':qm.type==='invalid'?t().requestInvalid(euro(qm.max)):qm.type==='pending'?t().requestPending:t().requestSent(euro(qm.amount)),!!qm&&qm.type==='invalid');
 }
-el('languageSelect').addEventListener('change',e=>setLanguage(e.target.value));
-el('memberSelect').addEventListener('change',e=>{selected=Number(e.target.value);renderMember()});
-el('repayButton').addEventListener('click',()=>{
- let m=members[selected],amount=Number(el('principalInput').value);
- if(el('principalInput').value.trim()===''||!Number.isFinite(amount)||amount<0||amount>m.loan){
-  repayMessage=null;el('repayResult').textContent=t().repayInvalid(euro(m.loan));return;
- }
- let remaining=m.loan-amount;repayMessage=[amount,remaining,remaining*.15,100+remaining*.15];renderMessages();
-});
-el('requestButton').addEventListener('click',()=>{
- let m=members[selected],amount=Number(el('borrowAmount').value),max=limit(m);
- if(el('borrowAmount').value.trim()===''||!Number.isFinite(amount)||amount<=0||amount>max){
-  request=null;requestMessage={type:'invalid',amount:max};el('approvalPanel').classList.add('hidden');renderMessages();return;
- }
- request={amount,member:selected,approved:[]};requestMessage={type:'sent',amount};
- el('approvalPanel').classList.remove('hidden');renderMessages();
-});
+function render(){
+const m=member(),contribution=contributionFor(m),interest=interestFor(m);
+el('collected').textContent=`${euro(monthlyTotal())} / €1,000.00`;
+el('paidCount').textContent=t().paidCount(members.filter(contributionFor).length);
+el('memberList').innerHTML=members.map(person=>`<div class="row"><strong>${person.name}</strong><span class="pill ${contributionFor(person)?'':'late'}">${contributionFor(person)?t().paid+' · €100':t().notPaid}</span></div>`).join('');
+el('groupSaved').textContent=euro(members.reduce((sum,person)=>sum+savingsFor(person),0));
+el('memberSavings').textContent=euro(savingsFor(m));el('lateWarning').hidden=!m.lateLastMonth;
+el('contributionStatus').textContent=contribution?t().paid:t().notPaid;el('contributionButton').disabled=!!contribution;
+el('loanPrincipal').textContent=euro(m.loanPrincipalCents);el('interestDue').textContent=euro(interest.amountCents-interest.paidCents);el('futureInterest').textContent=euro(futureInterestFor(m));
+el('noLoan').hidden=m.loanPrincipalCents!==0;el('repayButton').disabled=m.loanPrincipalCents===0;el('principalInput').disabled=m.loanPrincipalCents===0;el('principalInput').max=(m.loanPrincipalCents/100).toFixed(2);
+const repayments=loanRepayments.filter(r=>r.memberId===m.id);el('repaymentHistory').innerHTML=repayments.length?repayments.map(r=>`<li>${t().repaymentRow(euro(r.amountCents),euro(r.remainingPrincipalCents))}</li>`).join(''):`<li>${t().noRepayments}</li>`;
+el('borrowLimit').textContent=t().canBorrow(euro(limit(m)));el('borrowAmount').max=(limit(m)/100).toFixed(2);renderMessages();renderApprovals();
+}
+function setLanguage(value){language=value==='st'?'st':'en';document.documentElement.lang=language;el('languageSelect').value=language;document.querySelectorAll('[data-i18n]').forEach(node=>{node.textContent=t()[node.dataset.i18n];});render();}
+function recordContribution(){
+const m=member();if(contributionFor(m)){contributionMessages.set(m.id,'contributionDuplicate');render();return;}
+contributionRecords.push({memberId:m.id,month:DEMO_MONTH,amountCents:CONTRIBUTION_CENTS,simulated:true});contributionMessages.set(m.id,'contributionSuccess');render();
+}
+function recordRepayment(){
+const m=member(),amount=parseCents(el('principalInput').value);
+if(m.loanPrincipalCents===0){repaymentMessages.set(m.id,{type:'noLoan'});render();return;}
+if(amount===null||amount>m.loanPrincipalCents){repaymentMessages.set(m.id,{type:'invalid',max:m.loanPrincipalCents});render();return;}
+m.loanPrincipalCents-=amount;loanRepayments.push({memberId:m.id,month:DEMO_MONTH,amountCents:amount,remainingPrincipalCents:m.loanPrincipalCents,simulated:true});
+repaymentMessages.set(m.id,{type:'success',amount,remaining:m.loanPrincipalCents,interest:futureInterestFor(m)});el('principalInput').value='';render();
+}
+function submitRequest(){
+const m=member(),amount=parseCents(el('borrowAmount').value),max=limit(m);
+if(requestFor(m)&&requestFor(m).approved.length<3){requestMessages.set(m.id,{type:'pending'});render();return;}
+if(amount===null||amount>max){requestMessages.set(m.id,{type:'invalid',max});render();return;}
+loanRequests.push({memberId:m.id,amountCents:amount,approved:[],simulated:true,disbursed:false});requestMessages.set(m.id,{type:'sent',amount});render();
+}
+function approveRequest(admin){const request=requestFor(member());if(!request||![1,2,3].includes(admin)||request.approved.includes(admin))return;request.approved.push(admin);renderApprovals();/* Approval never disburses money or changes principal. */}
 function renderApprovals(){
- el('approvals').innerHTML=[1,2,3].map(i=>`<button class="secondary" data-admin="${i}" ${request.approved.includes(i)?'disabled':''}>${t().reviewer} ${i}: ${request.approved.includes(i)?t().approved:t().approve}</button>`).join(' ');
- el('approvalStatus').textContent=t().approvalStatus(request.approved.length,request.approved.length===3);
- el('approvals').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
-  let i=Number(b.dataset.admin);if(!request.approved.includes(i)){request.approved.push(i);renderApprovals()}
- }));
+const request=requestFor(member());el('approvalPanel').hidden=!request;
+if(!request){el('approvals').innerHTML='';el('approvalStatus').textContent='';return;}
+el('approvals').innerHTML=[1,2,3].map(i=>`<button type="button" class="secondary" data-admin="${i}" ${request.approved.includes(i)?'disabled':''}>${t().reviewer} ${i}: ${request.approved.includes(i)?t().approved:t().approve}</button>`).join('');
+el('approvalStatus').textContent=t().approvalStatus(request.approved.length,request.approved.length===3);
+el('approvals').querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>approveRequest(Number(button.dataset.admin))));
 }
+el('memberSelect').innerHTML=members.map(m=>`<option value="${m.id}">${m.name}</option>`).join('');el('memberSelect').value=selected;
+el('memberSelect').addEventListener('change',event=>{selected=Number(event.target.value);el('principalInput').value='';render();});
+el('languageSelect').addEventListener('change',event=>setLanguage(event.target.value));
+el('contributionButton').addEventListener('click',recordContribution);el('repayButton').addEventListener('click',recordRepayment);el('requestButton').addEventListener('click',submitRequest);
 setLanguage('en');
 </script></body></html>
 
